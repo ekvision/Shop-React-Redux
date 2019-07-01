@@ -1,0 +1,143 @@
+.productItem {
+  display: flex;
+  width: 60%;
+  box-shadow: 0 0 1px #999;
+  margin-top: 12px;
+  padding: 15px 20px;
+  &ImgInfoTextWrap {
+    width: 100%;
+    padding-right: 5px;
+  }
+  &ImgInfoWrap {
+    display: flex;
+  }
+  &Info {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 0.7rem 0 1.3rem;
+    min-width: 100px;
+    &Title {
+      color: #000;
+      font-size: 1.2rem;
+      font-weight: 600;
+      word-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+    &Text{
+      line-height: 17px;
+      font-size: 0.9rem;
+    }
+  }
+  &Img img{
+    height: 160px;
+    width: 80px;
+  }
+  &AddOrderBlock {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 32%;
+    border-left: 1px solid #ccc;
+    padding: 1rem 0 0 1rem;
+  }
+  &AddOrderPrice {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 0 10px;
+    color: #659;
+    margin-bottom: .8rem;
+  }
+  &BtnWrap {
+    display: flex;
+  }
+  &Btn {
+    font-family: Ubuntu;
+    font-weight: 600;
+    font-size: 0.88rem;
+    letter-spacing: 0.02rem;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.1rem;
+    min-width: 7.3rem;
+    margin-left: 10px;
+    background: #315;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  &Quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6px;
+    height: 2.1rem;
+    width: 57px;
+    color: #fff;
+    background: #315;
+    font-size: 1.05rem;
+    font-weight: 600;
+    i {
+      font-size: 1.5rem;
+    }
+    span {
+      color: #0e9;
+      margin-left: 2px;
+      font-family: Montserrat;
+    }
+  }
+  &Quantity:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  &IconsWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    min-width: 74px;
+    user-select: none;
+  }
+  &FavoriteIconBorder, &FavoriteIcon, &CompareIcon {
+    width: 32px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #888;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    font-size: 1.55rem;
+    font-weight: 900;
+  }
+}
+
+@media (max-width: 1024px) {
+  .productItem {
+    width: 96%;
+  }
+}
+@media (max-width: 640px) {
+  .productItem {
+    flex-direction: column;
+    box-shadow: 0 1px 4px #777;
+    width: 96%;
+    &InfoText{
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &AddOrderBlock {
+      padding: 0.5rem 0 0 0;
+      width: 100%;
+      border-left: none;
+      border-top: 1px solid #ccc;
+    }
+    &AddOrderPrice {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

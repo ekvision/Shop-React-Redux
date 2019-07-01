@@ -1,0 +1,26 @@
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  0% {
+    color: #0bf;
+  }
+  50% {
+    color: #09c;
+  }
+}
+
+.loadingIndicator {
+  display: flex;
+  align-items: center;
+  margin: 18vh auto;
+  i {
+    animation: loading 3000ms linear;
+    animation-iteration-count: infinite;
+    font-size: 6.4rem;
+    color: #0bf;
+  }
+}

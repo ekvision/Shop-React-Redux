@@ -1,0 +1,29 @@
+.favoritesListWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 5.8rem;
+  .favoritesPageTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    font-weight: 600;
+    margin-bottom: 5vh;
+    color: #39b;
+    letter-spacing: 0.5rem;
+    border-bottom: 1px solid #aaa;
+    width: 25%;
+    min-width: 320px;
+    height: 54px;
+    i {
+      font-size: 2rem;
+    }
+  }
+  .favoritesListRender {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}

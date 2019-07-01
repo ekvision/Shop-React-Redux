@@ -1,0 +1,101 @@
+.header {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #102;
+  height: 70px;
+  width: 100%;
+  box-shadow: 0 2px 8px #555;
+  &Logo {
+    color: #baf;
+    font-family: "Spectral SC";
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    padding-left: 7px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+      color: #baf;
+    }
+  }
+  &IconsWrap {
+    display: flex;
+    align-items: center;
+  }
+  .headerActiveTab {
+    color: #0ff;
+  }
+  &Menu i {
+    color: #baf;
+    padding: 0 5px;
+    margin-left: 0.1rem;
+    font-size: 1.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+      color: #3ef;
+    }
+  }
+  &FavoriteIcon, &HomeIcon {
+    color: #baf;
+    &:hover {
+      text-decoration: none;
+      color: #3ef;
+    }
+    i {
+      font-size: 1.7rem;
+      padding: 0 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &CartIconWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #baf;
+    padding: 0 5px;
+    &:hover {
+      text-decoration: none;
+      color: #3ef;
+    }
+    i {
+      font-size: 1.55rem;
+    }
+    span {
+      display: flex;
+      align-items: flex-start;
+      font-size: 1.04rem;
+      height: 19px;
+      color: #0e8;
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .header {
+    &Logo {
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+    }
+  }
+}
+@media (max-width: 370px) {
+  .header {
+    &Logo {
+      font-size: 1.6rem;
+      letter-spacing: 0px;
+    }
+    &IconsWrap {
+      min-width: 160px;
+    }
+  }
+}

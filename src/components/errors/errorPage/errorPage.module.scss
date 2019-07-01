@@ -1,0 +1,19 @@
+.errorInfo {
+  padding-top: 30vh;
+  display: flex;
+  justify-content: space-around;
+  p {
+    color: #f50;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: "Spectral SC";
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 25%;
+    padding: 30px 0;
+    min-width: 320px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+}
