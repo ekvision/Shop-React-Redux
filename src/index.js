@@ -5,6 +5,7 @@ import App from './components/app/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from "react-router-dom";
+import ScrollToTop from './scrollToTop'
 
 import store from './store'
 import ErrorBoundry from "./components/errors/errorBoundary/errorBoundary";
@@ -13,7 +14,9 @@ ReactDOM.render(
   <Provider store={store}>
     <ErrorBoundry>
       <BrowserRouter>
-        <App />
+        <ScrollToTop>
+          <App />
+        </ScrollToTop>
       </BrowserRouter>
     </ErrorBoundry>
   </Provider>,

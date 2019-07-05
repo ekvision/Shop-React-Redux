@@ -1,0 +1,68 @@
+.menu, .menuHide {
+  transition: 250ms;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  z-index: 999;
+  //background: linear-gradient(40deg, #101, #250030, #101, #250030, #101);
+  background: #fff;
+  top: 70px;
+  right:0;
+  width: 260px;
+  height: 100vh;
+  border-top: 0.04rem solid #fff;
+  text-align: center;
+  padding: 50px 0;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-family: Montserrat;
+    font-size: 0.8rem;
+    color: #406;
+    text-transform: uppercase;
+    padding: 10px 30px 10px 30px;
+    letter-spacing: 1px;
+    width: 100%;
+    text-decoration: none;
+    border-bottom: 0.04rem solid #eee;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      color: #baf;
+      background: #102;
+    }
+  }
+}
+.menuHide {
+  right: -260px;
+}
+
+.menuBlack, .menuBlackHide {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.70);
+  z-index: -1;
+  display: block;
+}
+.menuBlackHide {
+  right: -100vw;
+}
+
+@media (max-width: 1024px) {
+  .menu, .menuHide {
+    a {
+      font-size: 0.9rem;
+      padding: 12px 20px 12px 40px;
+    }
+  }
+}

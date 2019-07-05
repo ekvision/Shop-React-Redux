@@ -31,7 +31,7 @@ const CartPage = ({addedProductsToCartPage, onIncrease, onDecrease, onDelete}) =
                   <i className={`material-icons`}>local_mall</i>
                   <span>{ count }, </span>
                 </div>
-                <div className={s.productItemTotalPrice}>Total: €{ price }</div>
+                <div className={s.productItemTotalPrice}>€{ price/count }</div>
               </div>
               <div className={s.productItemBtnWrap}>
                 <div className={s.productItemBtnPlus} onClick={() => {onIncrease(product)}}>
@@ -46,11 +46,15 @@ const CartPage = ({addedProductsToCartPage, onIncrease, onDecrease, onDelete}) =
               </div>
             </div>
           </div>
-
-
         </div>
       )
     })
+  }
+
+  const totalPriceAllProducts = () => {
+    return addedProductsToCartPage.reduce((accumulator, currentvalue) => {
+      return accumulator + currentvalue.price;
+    }, 0)
   }
 
   return (
@@ -59,6 +63,19 @@ const CartPage = ({addedProductsToCartPage, onIncrease, onDecrease, onDelete}) =
         <i className={`material-icons`}>local_mall</i>
       </h2>
       <div>{ productList() }</div>
+      {
+        totalPriceAllProducts() ?
+        <div className={s.cartPagePriceAllWrap}>
+          <div className={s.cartPagePriceAllInnerWrap}>
+            <span className={s.cartPageTotalPriceAll}>Total:</span>
+            <span className={s.cartPagePriceAllProducts}>€{ totalPriceAllProducts() }</span>
+          </div>
+          <div className={s.cartPagePayWrap}>
+            <i className="fas fa-wallet"></i>Pay
+          </div>
+        </div> :
+        <div className={s.cartPageEmptyCart}>Empty shopping cart</div>
+      }
     </div>
   )
 }

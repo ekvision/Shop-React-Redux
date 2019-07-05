@@ -20,9 +20,9 @@ const ProductItem = ({product, itemCount, addToCart, toFavorits, isFavorite}) =>
     <div key={id} className={s.productItem}>
       <div className={s.productItemImgInfoTextWrap}>
         <div className={s.productItemImgInfoWrap}>
-          <div className={s.productItemImg}>
+          <Link className={s.productItemImg} to={'/product/' + title}>
             <img src={productImage} alt={title}/>
-          </div>
+          </Link>
           <div className={s.productItemInfo}>
             <Link className={s.productItemInfoTitle} to={'/product/' + title}>{ title }</Link>
             <div className={s.productItemInfoText}>{ infoText }</div>
