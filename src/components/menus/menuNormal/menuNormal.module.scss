@@ -1,5 +1,5 @@
 .menu, .menuHide {
-  transition: 250ms;
+  transition: 200ms;
   user-select: none;
   display: flex;
   flex-direction: column;
@@ -9,12 +9,14 @@
   //background: linear-gradient(40deg, #101, #250030, #101, #250030, #101);
   background: #fff;
   top: 70px;
-  right:0;
-  width: 260px;
+  right: 0;
+  width: 280px;
   height: 100vh;
-  border-top: 0.04rem solid #fff;
+  border-top: 0.05rem solid #0fa;
+  border-right: 33px solid #490060;
   text-align: center;
   padding: 50px 0;
+  box-shadow: -2px 0 30px 0 #222;
   a {
     display: flex;
     align-items: center;
@@ -22,7 +24,7 @@
     font-weight: 700;
     font-family: Montserrat;
     font-size: 0.8rem;
-    color: #406;
+    color: #000;
     text-transform: uppercase;
     padding: 10px 30px 10px 30px;
     letter-spacing: 1px;
@@ -35,13 +37,13 @@
     }
 
     &:hover {
-      color: #baf;
-      background: #102;
+      color: #fff;
+      background: #490060;
     }
   }
 }
 .menuHide {
-  right: -260px;
+  right: -310px;
 }
 
 .menuBlack, .menuBlackHide {
@@ -50,7 +52,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.70);
+  background: rgba(0, 0, 0, 0.25);
   z-index: -1;
   display: block;
 }

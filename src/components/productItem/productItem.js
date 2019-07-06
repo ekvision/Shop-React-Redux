@@ -12,8 +12,8 @@ const ProductItem = ({product, itemCount, addToCart, toFavorits, isFavorite}) =>
   const {id, title, price, infoText, productImage} = product;
   const favoriteActiveStyle = {
     color: '#fff',
-    borderColor: '#08b',
-    background: '#08b'
+    borderColor: '#057',
+    background: '#057'
   }
 
   return (
@@ -30,8 +30,8 @@ const ProductItem = ({product, itemCount, addToCart, toFavorits, isFavorite}) =>
         </div>
       </div>
 
-      <div className={s.productItemAddOrderBlock}>
-        <p className={s.productItemAddOrderPrice}>€{ price }</p>
+      <div className={s.productItemOrderBlock}>
+        <p className={s.productItemOrderPrice}>€{ price }</p>
         <div className={s.productItemBtnWrap}>
           <Link to="/cart" className={s.productItemQuantity}>
             <i className={`material-icons`}>local_mall</i>
