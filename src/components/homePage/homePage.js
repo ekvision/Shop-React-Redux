@@ -15,22 +15,34 @@ class HomePage extends React.Component  {
     products: [],
     loading: true,
     search: ''
-  }
+  };
 
-  componentDidMount(){
+  componentDidMount() {
     this.dataService.getProducts()
       .then(res => this.setState((state) => res.map(item => {
         return {
-          products: state.products = [...state.products, item],
+          products: state.products = [...state.products, item].sort((a, b) => a.price - b.price),
           loading: state.loading = false
         }
       })))
-      .catch(err => {console.log(err)})
+      .catch(err => {
+        console.log(err)
+      });
   }
 
   productFilter = () => this.state.products.filter(product => {
     return product.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
   });
+
+  priceFilterUp = () => {
+    return this.setState(state =>
+      state.products = this.productFilter().sort((a, b) => a.price - b.price));
+  };
+
+  priceFilterDown = () => {
+    this.priceFilterUp();
+    return this.setState(state => state.products.reverse());
+  };
 
   homeListRender = () => {
     return this.productFilter().map((product) => {
@@ -60,6 +72,18 @@ class HomePage extends React.Component  {
                placeholder={'Product search...'}
         />
         <i className={`${s.faSearch} fas fa-search`}></i>
+      </div>
+      <div className={s.filterBlock}>
+        <div className={s.filterBlockBtnWrap}>
+          <button onClick={this.priceFilterUp}>Price Up
+            <i className={`material-icons`}>expand_less</i>
+          </button>
+        </div>
+        <div className={s.filterBlockBtnWrap}>
+          <button onClick={this.priceFilterDown}>Price Down
+            <i className={`material-icons`}>expand_more</i>
+          </button>
+        </div>
       </div>
       {loading ? <LoadingIndicator/> : <div>{this.homeListRender()}</div>}
     </div>

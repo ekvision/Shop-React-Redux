@@ -55,7 +55,7 @@ const CartPage = ({addedProductsToCartPage, onIncrease, onDecrease, onDelete}) =
     return addedProductsToCartPage.reduce((accumulator, currentvalue) => {
       return accumulator + currentvalue.price;
     }, 0)
-  }
+  };
 
   return (
     <div className={s.cartPage}>
@@ -78,7 +78,7 @@ const CartPage = ({addedProductsToCartPage, onIncrease, onDecrease, onDelete}) =
       }
     </div>
   )
-}
+};
 
 
 const mapStateToProps = (addedItems) => {

@@ -5,15 +5,31 @@
   padding: 1rem 2rem;
   width: 100%;
   min-height: 130px;
-  background: #202;
+  background: linear-gradient(45deg, #404, #101, #404, #101, #404);
   color: #fff;
   font-size: 0.8rem;
-  &Logo p{
-    font-size: 1.6rem;
+  &LogoWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 34px;
     letter-spacing: 2px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &LogoShort {
     font-family: "Spectral SC";
+    font-size: 2rem;
     font-weight: 600;
-    cursor: pointer;
+    color: #09e;
+  }
+  &LogoLong {
+    font-family: "Spectral SC";
+    font-size: 1.05rem;
+    border-top: 1px solid #fff;
+    line-height: 22px;
+    color: #09e;
   }
   &MenuListWrap {
     margin-top: 0;
@@ -26,7 +42,7 @@
     font-family: Ubuntu;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #0ba;
+    color: #09e;
     i {
       padding: 0 8px;
       font-size: 1.25rem;

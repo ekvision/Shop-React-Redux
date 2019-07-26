@@ -15,7 +15,7 @@ const addItemToCart = (state, actionProduct, itemCartIndex, itemUpdate, item) =>
     itemUpdate,
     ...state.slice(itemCartIndex + 1)
   ]
-}
+};
 
 
 const updateCartItem = (item = {}, quantity) => {
@@ -27,7 +27,7 @@ const updateCartItem = (item = {}, quantity) => {
       count: count + quantity
     }
   }
-}
+};
 
 
 const updateOrder = (state, action, quantity) => {
@@ -36,7 +36,7 @@ const updateOrder = (state, action, quantity) => {
   const itemUpdate = updateCartItem(item, quantity);
 
   return addItemToCart(state, action.product, itemCartIndex, itemUpdate, item)
-}
+};
 
 //REDUCER
 

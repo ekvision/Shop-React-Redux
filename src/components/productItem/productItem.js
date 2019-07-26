@@ -12,9 +12,9 @@ const ProductItem = ({product, itemCount, addToCart, toFavorits, isFavorite}) =>
   const {id, title, price, infoText, productImage} = product;
   const favoriteActiveStyle = {
     color: '#fff',
-    borderColor: '#057',
-    background: '#057'
-  }
+    borderColor: '#068',
+    background: '#068'
+  };
 
   return (
     <div key={id} className={s.productItem}>
@@ -59,12 +59,12 @@ const mapStateToProps = ({addToCart}) => {
   return {
     productsInCart: addToCart
   }
-}
+};
 
 const mapDispatchToProps = {
   addToCart: PRODUCT_ADD_TO_CART,
   toFavorits: TO_FAVORITS,
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductItem);
 

@@ -11,15 +11,14 @@
   }
   .productListSearch {
     margin: 0.5vh auto;
-    margin-top: 3vh;
+    margin-top: 1rem;
     width: 40%;
     display: flex;
     justify-content: center;
     input {
       border: 1px solid #bbb;
-      border-radius: 3px 0 0 3px;
       outline: none;
-      padding: 5px 15px;
+      padding: 4px 15px;
       width: 100%;
       font-size: 1.1rem;
       letter-spacing: 1px;
@@ -31,15 +30,39 @@
     .faSearch {
       color: #baf;
       font-size: 1.2rem;
-      width: 70px;
+      width: 72px;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
       border-left: 2px solid #fff;
-      background: #555;
-      border-radius: 0 3px 3px 0;
-
+      background: #444;
+    }
+  }
+  .filterBlock {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 254px;
+    font-size: 0.77rem;
+    margin-top: 10px;
+    button {
+      font-family: Raleway;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #649;
+      letter-spacing: 1px;
+      outline: none;
+      border: 1px solid #649;
+      background: none;
+      font-weight: 800;
+      text-transform: uppercase;
+      width: 120px;
+      i {
+        width: 16px;
+      }
     }
   }
 }
@@ -49,9 +72,6 @@
   .productListWrapper {
     .productListSearch {
       width: 78%;
-      input {
-        padding: 6px 15px;
-      }
     }
   }
 }
@@ -59,9 +79,6 @@
   .productListWrapper {
     .productListSearch {
       width: 96%;
-      input {
-        padding: 6px 15px;
-      }
     }
   }
 }

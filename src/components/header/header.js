@@ -6,7 +6,7 @@ import s from './header.module.scss'
 import MenuNormal from '../menus/menuNormal/menuNormal'
 
 
-const Header = ({productsInCart}) => {
+const Header = ({productsInCart, scrollen}) => {
 
   const [modal, setStateModal] = useState(false);
 
@@ -16,15 +16,16 @@ const Header = ({productsInCart}) => {
           return accumulator + currentValue.count;
         }, 0)
       }
-    }
+    };
 
   return (
     <div className={s.header}>
-      <h2 className={s.headerLogoWrap}>
-        <NavLink to="/" className={s.headerLogo}>Shop Logo</NavLink>
-      </h2>
+      <NavLink to={'/'} className={s.headerLogoWrap} onClick={scrollen}>
+        <span className={s.headerLogoShort}>VS</span>
+        <span className={s.headerLogoLong}>Vision Store</span>
+      </NavLink>
       <div className={s.headerIconsWrap}>
-        <NavLink activeClassName={s.headerActiveTab} exact to="/" className={s.headerHomeIcon}>
+        <NavLink activeClassName={s.headerActiveTab} exact to="/" className={s.headerHomeIcon} onClick={scrollen}>
           <i className="fas fa-home"></i>
         </NavLink>
         <NavLink activeClassName={s.headerActiveTab} to="/favorites" className={s.headerFavoriteIcon}>
@@ -35,8 +36,9 @@ const Header = ({productsInCart}) => {
           <span>{ productsInCart.length ? cartCount() : 0 }</span>
         </NavLink>
         <div className={s.headerMenu} onClick={() => setStateModal(!modal)}>
-          {!modal ? <i className={`material-icons`}>menu</i> :
-          <i className={`material-icons`}>close</i>}
+          {!modal ?
+            <i className={`material-icons`}>menu</i> : <i className={`material-icons`}>close</i>
+          }
         </div>
           <MenuNormal
             modal={modal}

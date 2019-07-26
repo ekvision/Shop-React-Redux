@@ -11,24 +11,30 @@ import ErrorPage from "../errors/errorPage/errorPage";
 import Footer from "../footer/footer";
 
 
-class App extends React.Component{
-  render() {
-    return (
-      <div className={s.app}>
-        <Header/>
-        <div className={s.appBodyWrap}>
-          <Switch>
-            <Route path="/" component={HomePage} exact/>
-            <Route path="/cart" component={CartPage}/>
-            <Route path="/favorites" component={FavoritesPage}/>
-            <Route path="/product/:title" component={ProductDetailsPage}/>
-            <Route component={ErrorPage}/>
-          </Switch>
-        </div>
-        <Footer/>
+const App = () => {
+
+  const scrollen = () => {
+    document.body.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  return (
+    <div className={s.app}>
+      <Header scrollen={scrollen}/>
+      <div className={s.appBodyWrap}>
+        <Switch>
+          <Route path="/" component={HomePage} exact/>
+          <Route path="/cart" component={CartPage}/>
+          <Route path="/favorites" component={FavoritesPage}/>
+          <Route path="/product/:title" component={ProductDetailsPage}/>
+          <Route component={ErrorPage}/>
+        </Switch>
       </div>
-    );
-  }
-}
+      <Footer scrollen={scrollen}/>
+    </div>
+  );
+};
 
 export default App;

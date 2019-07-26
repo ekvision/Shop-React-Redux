@@ -1,6 +1,7 @@
 .productItem {
   display: flex;
   width: 60%;
+  max-width: 924px;
   box-shadow: 0 0 1px #999;
   margin-top: 12px;
   padding: 15px 20px;
@@ -52,8 +53,8 @@
     display: flex;
   }
   &Btn {
-    font-family: Ubuntu;
-    font-weight: 600;
+    font-family: Raleway;
+    font-weight: 700;
     font-size: 0.88rem;
     letter-spacing: 0.02rem;
     user-select: none;
@@ -72,14 +73,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    //padding: 0 6px;
     height: 2.1rem;
     width: 57px;
     color: #203;
-    //background: #708;
     border: 1px solid #102;
     font-size: 1.05rem;
-    font-weight: 600;
+    font-weight: 500;
     i {
       background: #baf;
       display: flex;
@@ -136,10 +135,8 @@
     box-shadow: 0 1px 4px #777;
     width: 96%;
     &InfoText{
-      width: 100%;
-      white-space: nowrap;
+      height: 3rem;
       overflow: hidden;
-      text-overflow: ellipsis;
     }
     &OrderBlock {
       padding: 0.5rem 0 0 0;
